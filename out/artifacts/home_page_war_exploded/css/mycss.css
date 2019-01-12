@@ -1,0 +1,303 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: url("../img/nig.jpg") no-repeat fixed top center;
+
+}
+
+html, button, input, select, textarea {
+    font-family: sans-serif
+}
+
+nav {
+
+}
+
+nav a {
+    text-decoration: none;
+    /*取消下划线*/
+    line-height: 37px;
+    /*a is a line element which do not have size(width,height*/
+    display: inline-block;
+    color: #000;
+
+}
+
+nav a:hover {
+    background: rgba(119, 114, 122, 0.5);
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+li {
+    padding: 3px;
+}
+
+ul {
+    padding-bottom: 10px;
+}
+
+
+button {
+    display: inline-block;
+    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+    *display: inline;
+    vertical-align: baseline;
+    margin: 0 2px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+button:hover {
+    text-decoration: none;
+}
+button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.container {
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.large-container {
+    width: auto;
+}
+
+.site-topbar {
+    position: relative;
+    font-size: 14px;
+    background-color: #eee;
+    height: 40px;
+    border-top: 3px solid rgb(191, 151, 146);
+    border-bottom: 1px solid rgb(174, 127, 172);
+}
+
+.site-topbar .sep {
+    margin: 0 1em;
+    color: #424242;
+}
+
+.site-header {
+    position: relative;
+    height: 100px;
+    background: rgba(204, 204, 204, 1);
+
+}
+
+.title2 {
+    font-size: 24px;
+    line-height: 100px;
+    float: left;
+}
+
+.site-header .header-logo {
+    float: left;
+    width: 100px;
+}
+
+.header-nav {
+    margin-left: 360px;
+    font-size: 20px;
+    float: left;
+    line-height: 100px;
+}
+
+.header-nav a {
+    padding: 20px;
+    color: #000;
+
+}
+
+.header-search {
+    float: left;
+    line-height: 100px;
+    margin-left: 60px;
+
+}
+
+.header-search .search-form {
+    position: relative;
+    margin-top: 33px;
+    width: 296px;
+    height: 50px;
+    float: left;
+    transition: all .2s;
+}
+
+.header-search .search-text {
+    width: 223px;
+    height: 44px;
+    float: left;
+    outline: 0;
+    background-color: #eee;
+    border: 1px #9d9d9d;
+
+}
+
+.site-header .search-btn {
+    width: 52px;
+    height: 44px;
+    float: left;
+    border: 0;
+
+    outline: 0;
+    background: url("../img/a.png") no-repeat top center;
+
+}
+
+.site-header .search-btn:hover {
+    background: rgba(150, 100, 120, .4) url("../img/2.png");
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+.banner,
+.main,
+.footer {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #eeeeee;
+
+}
+
+.login {
+    margin: 200px auto 0;
+    width: 400px;
+    height: 350px;
+    background: rgba(240, 240, 240, 1);
+
+}
+
+.register {
+    margin: 200px auto 0;
+    width: 400px;
+    height: 600px;
+    background: rgba(240, 240, 240, 1);
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+    -webkit-appearance: none;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+.in {
+    font-size: 20px;
+    display: block;
+    padding-top: 40px;
+    padding-left: 80px;
+
+}
+
+#regi {
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.btnadpt {
+    background-color: silver;
+    width: 60%;
+    margin: 20px auto;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.main {
+
+    height: 1000px;
+    background: rgba(240, 240, 240, 1);
+}
+
+.leftcontent {
+    color: white;
+    font-family: "Fira Code", serif;
+    font-size: 14px;
+    height: 1000px;
+    width: 350px;
+    position: absolute;
+}
+
+.pic-container {
+    padding-top: 40px;
+}
+
+.left-font {
+    padding: 20px 50px;
+}
+
+.item {
+    padding: 5px;
+}
+
+.rightcontent {
+    height: auto;
+    width: 810px;
+    margin-left: 350px;
+    background: rgba(240, 240, 240, 1);
+    padding: 50px 40px;
+    display: table;
+    float: left;
+}
+
+.clazz-item {
+    padding: 30px;
+}
+
+.in-item {
+    padding: 0 40px;
+}
+
+.footer {
+    padding: 10px 30px;
+    background-color: #fff;
+}

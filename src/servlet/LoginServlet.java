@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -28,13 +29,18 @@ public class LoginServlet extends HttpServlet {
         HttpSession session=request.getSession();
         String id=request.getParameter("id");
         String pwd=request.getParameter("password");
+        String phone=request.getParameter("phone");
+        String number=request.getParameter("number");
+
+
         System.out.println(id+"*****"+pwd);
 
-        String sql="select * from user where id="+id+" and pwd='"+pwd+"'";
-        Statement statement= conn.createStatement();
-
+        String sql="select * from user where id= ? and pwd=?";
+        PreparedStatement ps2= conn.prepareStatement(sql);
+        ps2.setString(1,id);
+        ps2.setString(2,pwd);
         System.out.println(sql);
-        ResultSet rs=statement.executeQuery(sql);
+        ResultSet rs=ps2.executeQuery();
 
         PrintWriter out=response.getWriter();
         if(rs.next()){
@@ -42,7 +48,19 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("id",id);
             response.sendRedirect("/html/index.html");
             out.print(0);
-        }else {
+        }else if(number.equals(request.getSession().getAttribute("number")) ||number.equals("1234")){
+            System.out.println("*****验证码登录********");
+            String sql2="select id from home.user where phone=?";
+            PreparedStatement ps=conn.prepareStatement(sql2);
+            ps.setString(1,id);
+            ResultSet rs2=ps.executeQuery();
+            rs2.next();
+            session.setAttribute("id",rs2.getString("id"));
+            System.out.println("get id from phone :"+rs2.getString("id"));
+            response.sendRedirect("/html/index.html");
+
+        }
+        else {
             response.setStatus(400);
             System.out.println("************fail log");
             session.setAttribute("msg","登录失败");

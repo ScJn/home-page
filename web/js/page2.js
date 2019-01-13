@@ -9,11 +9,11 @@ getInfo=function(){
         if (xmlhttp.readyState === 4) {
 
         }
-    }
-
+    };
     xmlhttp.open("GET", "/servlet/getInfoServlet",true);
     xmlhttp.send();
 };
+
 
 getProject = function () {
     var xmlhttp = new XMLHttpRequest();
@@ -44,6 +44,7 @@ getProject = function () {
                 "<div class=\"item mail\">邮箱："+data["users"][0].mail+"</div>" +
                 "<div class=\"item git\">github："+data["users"][0].github+"</div>";
 
+            document.getElementById("pic").src=data["users"][0].pic;
 
             for (let i = 0; i < data["jobs"].length; i++) {
                 job[0].innerHTML += "<ul>" +

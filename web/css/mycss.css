@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url("../img/nig.jpg") no-repeat fixed top center;
+    background: url("../img/nig.jpg") fixed -400px -400px;
 
 }
 
@@ -15,6 +15,11 @@ html, button, input, select, textarea {
 }
 
 nav {
+
+}
+
+a {
+    text-decoration: none;
 
 }
 
@@ -28,7 +33,7 @@ nav a {
 
 }
 
-nav a:hover {
+a:hover {
     background: rgba(119, 114, 122, 0.5);
     text-decoration: none;
 }
@@ -45,7 +50,6 @@ ul {
     padding-bottom: 10px;
 }
 
-
 button {
     display: inline-block;
     zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
@@ -58,22 +62,23 @@ button {
     text-decoration: none;
     font: 14px/100% Arial, Helvetica, sans-serif;
     padding: .5em 2em .55em;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
     -webkit-border-radius: .5em;
     -moz-border-radius: .5em;
     border-radius: .5em;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
+
 button:hover {
     text-decoration: none;
 }
+
 button:active {
     position: relative;
     top: 1px;
 }
-
 
 .container {
     width: 1226px;
@@ -90,7 +95,7 @@ button:active {
     font-size: 14px;
     background-color: #eee;
     height: 40px;
-    border-top: 3px solid rgb(191, 151, 146);
+    border-top: 3px solid rgb(5, 73, 94);
     border-bottom: 1px solid rgb(174, 127, 172);
 }
 
@@ -99,16 +104,18 @@ button:active {
     color: #424242;
 }
 
+
 .site-header {
     position: relative;
-    height: 100px;
+    height: 80px;
+    border-top: #1b6d85 10px;
     background: rgba(204, 204, 204, 1);
 
 }
 
 .title2 {
-    font-size: 24px;
-    line-height: 100px;
+    font-size: 22px;
+    line-height: 80px;
     float: left;
 }
 
@@ -119,9 +126,9 @@ button:active {
 
 .header-nav {
     margin-left: 360px;
-    font-size: 20px;
+    font-size: 18px;
     float: left;
-    line-height: 100px;
+    line-height: 80px;
 }
 
 .header-nav a {
@@ -191,17 +198,17 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 }
 
 .login {
-    margin: 200px auto 0;
+    margin: 80px auto 0;
     width: 400px;
-    height: 350px;
+    height: 300px;
     background: rgba(240, 240, 240, 1);
 
 }
 
 .register {
-    margin: 200px auto 0;
+    margin: 80px auto 0;
     width: 400px;
-    height: 600px;
+    height: 340px;
     background: rgba(240, 240, 240, 1);
 }
 
@@ -220,9 +227,9 @@ input[type="submit"] {
 }
 
 .in {
-    font-size: 20px;
+    font-size: 16px;
     display: block;
-    padding-top: 40px;
+    padding-top: 13px;
     padding-left: 80px;
 
 }
@@ -236,7 +243,7 @@ input[type="submit"] {
 .btnadpt {
     background-color: silver;
     width: 60%;
-    margin: 20px auto;
+    margin: 10px auto;
     height: 50px;
     line-height: 50px;
     display: block;

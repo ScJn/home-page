@@ -26,34 +26,37 @@ public class DeleteServlet extends HttpServlet {
                 case "job": {
                     System.out.println("*********in delete job*******");
                     String id = req.getParameter("id");
-                    String sql = "delete home.job where uid=? and id=?";
+                    String sql = "delete from home.job   where  id=?";
                     PreparedStatement ps = conn.prepareStatement(sql);
-                    ps.setInt(1, Integer.parseInt(uid));
-                    ps.setInt(2, Integer.parseInt(id));
+                    ps.setInt(1, Integer.parseInt(id));
+                    ps.execute();
                     break;
                 }
                 case "reward": {
                     System.out.println("*********in delete reward*******");
 
                     String id = req.getParameter("id");
-                    String sql = "delete home.reward where uid=? and id=?";
+                    String sql = "delete from home.reward  where  id=?";
                     PreparedStatement ps = conn.prepareStatement(sql);
-                    ps.setInt(1, Integer.parseInt(uid));
-                    ps.setInt(2, Integer.parseInt(id));
+                    ps.setInt(1, Integer.parseInt(id));
+                    ps.execute();
                     break;
                 }
                 case "project": {
                     System.out.println("*********in delete project*******");
 
                     String id = req.getParameter("id");
-                    String sql = "delete home.project where uid=? and id=?";
+                    String sql = "delete from home.project  where  id=?";
                     PreparedStatement ps = conn.prepareStatement(sql);
-                    ps.setInt(1, Integer.parseInt(uid));
-                    ps.setInt(2, Integer.parseInt(id));
+                    ps.setInt(1, Integer.parseInt(id));
+                    ps.execute();
                     break;
                 }
             }
+
             resp.sendRedirect("/html/back.html");
+            resp.setHeader("refresh", "1;url=/html/back.html");
+
 
         } catch (Exception e) {
             e.printStackTrace();

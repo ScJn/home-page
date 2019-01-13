@@ -13,15 +13,15 @@
 <div class="site-topbar">
 	<div class="container">
 		<nav class="top">
-			<a href="#">首页</a>
+			<a href="/html/login.jsp">首页</a>
 			<span class="sep">|</span>
-			<a href="#">行了啊</a>
-			<span class="sep">|</span>
-			
-			<a href="#">我真的很</a>
+			<a href="http://www.baidu.com">百度</a>
 			<span class="sep">|</span>
 			
-			<a href="#">五个字啊哦</a>
+			<a href="http://www.tmall.com">天猫</a>
+			<span class="sep">|</span>
+			
+			<a href="http://www.github.com">github</a>
 		</nav>
 	
 	</div>
@@ -31,18 +31,23 @@
 	<div class="container">
 		<div class="header-logo">
 			<a href="../img/logo.png" title="通程典当">
-				<img src="../img/logo.png" width="100" alt="1">
+				<img src="../img/logo.png" width="80" alt="1">
 			</a>
 		</div>
-		<div class="title2">通程典当</div>
-	
+		<div class="title2">Jn-homePage</div>
+		<div class="header-nav">
+			
+			<a href="login1.jsp">验证码登录</a>
+			<a href="login.jsp">密码登录</a>
+			<!--<a href="#">醒悟</a>-->
+		</div>
 	
 	</div>
 </div>
 
 <div class="container">
 	<div class="register" >
-		<div class="title">请登录</div>
+		<div class="title">请注册</div>
 		<form action="/servlet/RegisterServlet" method="post">
 			<label for="id"></label>
 			<div class="in input-id"> 账号:<input type="text" id="id" name="id" class="input1" /></div>
@@ -50,9 +55,7 @@
 			<div class="in input-password">密码:<input type="password" id="password" name="password" class="input1"></div>
 			<div class="in input-password">姓名:<input type="text" id="name" name="name" class="input1"></div>
 			<div class="in input-phone">电话:<input type="text" id="phone" name="phone" class="input1"></div>
-			<div class="in input-school">学校:<input type="text" id="school" name="school" class="input1"></div>
-			<div class="in input-mail">邮箱:<input type="text" id="mail" name="mail" class="input1"></div>
-			<div class="in input-submit"><input type="submit" id="submit1" class="btnadpt" value="注册"> </div>
+			<div class="input-submit"><input type="submit" id="submit1" class="btnadpt" value="注册"> </div>
 			
 		</form>
 	</div>

@@ -32,6 +32,7 @@ public class UserDao {
         jsonObject.put("phone",rs.getString("phone"));
         jsonObject.put("mail",rs.getString("mail"));
         jsonObject.put("github",rs.getString("github"));
+        jsonObject.put("pic",rs.getString("pic"));
         JSONArray jsonArray=new JSONArray();
         jsonArray.add(jsonObject);
         return jsonArray;

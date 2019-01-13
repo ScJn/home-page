@@ -53,28 +53,29 @@
     <div class="login">
         <div class="title">请登录</div>
         <script>
-            tophone=function () {
+            tophone = function () {
 
-                var phone=document.getElementById("phone").value;
+                var phone = document.getElementById("phone").value;
                 console.log("********send message******");
-                var xmlhttp=new XMLHttpRequest();
-                xmlhttp.onreadystatechange=function () {
-                    if(xmlhttp.readyState===4){
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4) {
                         alert("发送成功");
                     }
                 };
 
-                xmlhttp.open("GET", "/servlet/PhoneServlet?phone="+phone,true);
+                xmlhttp.open("GET", "/servlet/PhoneServlet?phone=" + phone, true);
                 xmlhttp.send();
 
             }
         </script>
         <form action="${pageContext.request.contextPath}/servlet/LoginServlet" method="post">
-            <label for="id"></label>
-            <div class="in input-id"> 账号:<input type="text" id="id" name="id" class="input1"/></div>
-            <label for="password"></label>
-            <div class="in input-password">密码:<input type="password" id="password" name="password" class="input1"></div>
-
+            <label for="phone"></label>
+            <div class="in input-phone"> 电话:<input type="text" name="phone" id="phone">
+                <button onclick="tophone()" type="button">发送</button>
+            </div>
+            <div class="in input-number">验证码:<label for="number"></label><input type="text" name="number" id="number">
+            </div>
             <div id="input-submit"><input type="submit" id="submit1" class="btnadpt" value="登录"></div>
 
             <div id="regi"><a href="${pageContext.request.contextPath}/html/register.html">注册</a>

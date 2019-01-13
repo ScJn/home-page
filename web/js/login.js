@@ -1,16 +1,13 @@
-window.onload(a=function () {
-
-});
-
-
 
 var submit=document.getElementById("submit1");
-submit.onclick=function () {
-    var account=document.getElementById("id").innerText;
-    var password=document.getElementById("password");
+my_login =function () {
+
+    var account=document.getElementById("id").value;
+    var password=document.getElementById("password").value;
 
     var xmlhttp=new XMLHttpRequest();
-    var url="/servlet/getInfoServlet";
+    var url="10.0.1.67/form_view/?id="+id+"&password="+password;
+    // var url="/servlet/getInfoServlet";
 
     if(xmlhttp.readyState===4){
         var rtn=xmlhttp.responseText;

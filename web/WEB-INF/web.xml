@@ -27,6 +27,28 @@
         <servlet-name>DeleteServlet</servlet-name>
         <servlet-class>servlet.DeleteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SavePicServlet</servlet-name>
+        <servlet-class>servlet.SavePicServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PhoneServlet</servlet-name>
+        <servlet-class>servlet.PhoneServlet</servlet-class>
+    </servlet>
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>PhoneServlet</servlet-name>
+        <url-pattern>/servlet/PhoneServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SavePicServlet</servlet-name>
+        <url-pattern>/servlet/SavePicServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeleteServlet</servlet-name>
         <url-pattern>/servlet/DeleteServlet</url-pattern>

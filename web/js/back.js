@@ -148,6 +148,28 @@ delete_project=function(index){
     xmlhttp.send();
 };
 
+save_pic=function(){
+
+    console.log("************in save pic************");
+    var path=document.getElementById("pic-path");
+    var picDom=document.getElementById("pic");
+    picDom.src=path.value;
+
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4) {
+            alert("修改成功");
+        }
+    };
+
+    xmlhttp.open("POST", "/servlet/SavePicServlet?" +
+        "&type=pic&id="+path.value, true);
+    xmlhttp.send();
+
+
+};
+
 getProject = function () {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -173,6 +195,7 @@ getProject = function () {
 
             document.getElementsByClassName("name")[0].innerHTML = data["users"][0].name;
 
+            document.getElementById("pic").src=data["users"][0].pic;
             user = document.getElementsByClassName("left-font");
             user[0].innerHTML +=
                 '<input class= "info-id" type="hidden" value="' + data["users"][0].id + '">' +
